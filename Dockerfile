@@ -3,4 +3,4 @@ FROM openjdk:8-jdk
 ADD gradle /tmp
 WORKDIR /tmp
 
-RUN ./gradlew jar
+RUN ./gradlew build
