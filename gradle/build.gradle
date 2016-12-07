@@ -9,7 +9,9 @@ buildscript {
 
 repositories { jcenter() }
 
+apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'scala'
 
 dependencyManagement {
     imports {
@@ -36,4 +38,10 @@ dependencies {
     compile 'org.springframework.cloud:spring-cloud-starter-feign'
     compile 'org.springframework.cloud:spring-cloud-starter-turbine'
     compile 'org.springframework.cloud:spring-cloud-starter-zuul'
+
+    compile "com.typesafe.akka:akka-actor_2.12:$akkaVersion"
+    compile "com.typesafe.akka:akka-stream_2.12:$akkaVersion"
+    compile "com.typesafe.akka:akka-persistence_2.12:$akkaVersion"
+    compile "com.typesafe.akka:akka-remote_2.12:$akkaVersion"
+    compile "com.typesafe.akka:akka-slf4j_2.12:$akkaVersion"
 }
