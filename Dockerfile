@@ -4,6 +4,6 @@ ADD gradle /tmp
 WORKDIR /tmp
 
 RUN ./gradlew --no-daemon build \
- && rm -fR /tmp/* /tmp/.*
+ && rm -fR /tmp/*
 
 WORKDIR /
