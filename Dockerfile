@@ -5,6 +5,8 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
  && npm update  -g                                         \
  && npm install -g typescript typings angular-cli || true
 
+RUN ng version
+
 ADD gradle /tmp
 WORKDIR /tmp
 
