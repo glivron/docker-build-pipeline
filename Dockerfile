@@ -3,7 +3,7 @@ FROM openjdk:8-jdk
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - \
  && apt-get -qq install -y nodejs                          \
  && npm update  -g                                         \
- && npm install -g typescript typings angular-cli || true
+ && npm install -g typescript typings @angular/cli || true
 
 RUN ng version
 
